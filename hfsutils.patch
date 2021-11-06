@@ -1,0 +1,27 @@
+Common subdirectories: hfsutils-3.2.6/doc and hfsutils-3.2.6.new/doc
+Common subdirectories: hfsutils-3.2.6/hfsck and hfsutils-3.2.6.new/hfsck
+Common subdirectories: hfsutils-3.2.6/images and hfsutils-3.2.6.new/images
+Common subdirectories: hfsutils-3.2.6/libhfs and hfsutils-3.2.6.new/libhfs
+Common subdirectories: hfsutils-3.2.6/librsrc and hfsutils-3.2.6.new/librsrc
+Common subdirectories: hfsutils-3.2.6/linux and hfsutils-3.2.6.new/linux
+Common subdirectories: hfsutils-3.2.6/.stamp and hfsutils-3.2.6.new/.stamp
+diff -u hfsutils-3.2.6/tclhfs.c hfsutils-3.2.6.new/tclhfs.c
+--- hfsutils-3.2.6/tclhfs.c	1998-11-02 17:08:32.000000000 -0500
++++ hfsutils-3.2.6.new/tclhfs.c	2021-11-05 22:43:03.563753491 -0400
+@@ -32,6 +32,7 @@
+ # include <string.h>
+ # include <ctype.h>
+ # include <limits.h>
++# include <errno.h>
+ 
+ # include <tcl.h>
+ 
+@@ -44,6 +45,7 @@
+ # include "suid.h"
+ # include "version.h"
+ 
++
+ extern int errno;
+ 
+ # define ERROR(code, str)	(hfs_error = (str), errno = (code))
+Common subdirectories: hfsutils-3.2.6/test and hfsutils-3.2.6.new/test
